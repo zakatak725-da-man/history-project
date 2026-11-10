@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP US History: Industrial Revolution Portfolio</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fcfbf7;
+            color: #2b2b2b;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #dcdcdc;
+            background: #ffffff;
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #4a2c11;
+            border-bottom: 2px solid #4a2c11;
+            padding-bottom: 10px;
+        }
+        .homework-text {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        /* Hidden Game Section Toggle */
+        .sandbox-trigger {
+            color: #777;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 50px;
+            display: inline-block;
+        }
+        .game-panel {
+            display: none;
+            margin-top: 20px;
+            border-top: 1px dashed #ccc;
+            padding-top: 20px;
+        }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .tab-btn {
+            background: #eee;
+            border: 1px solid #ccc;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        .tab-btn.active {
+            background: #4a2c11;
+            color: white;
+            border-color: #4a2c11;
+        }
+        .game-frame-container {
+            width: 100%;
+            height: 500px;
+            background: #000;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Primary Source Analysis: Technological Infrastructure (1870-1920)</h1>
+    <p class="homework-text">
+        <strong>Abstract:</strong> This research module evaluates the socio-economic impacts of mechanization during the Second Industrial Revolution. By examining labor specialization frameworks and the expansion of urban mass-transit grids, we can trace the direct correlation between automated assembly systems and modern industrial efficiency profiles.
+    </p>
+
+    <!-- Hidden Game Accessor -->
+    <span class="sandbox-trigger" onclick="toggleSandbox()">[Access Code Environment Sandbox]</span>
+
+    <div class="game-panel" id="gamePanel">
+        <h3>Interactive Retro Emulator Hub</h3>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="loadGame('https://emulatorjs.org', this)">GBA / Retro Emulator</button>
+            <button class="tab-btn" onclick="loadGame('https://gitlab.io', this)">Burrito Bison</button>
+        </div>
+        <div class="game-frame-container">
+            <iframe id="gameFrame" src="https://emulatorjs.org"></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSandbox() {
+        var panel = document.getElementById('gamePanel');
+        if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+        } else {
+            panel.style.display = 'block';
+        }
+    }
+
+    function loadGame(url, element) {
+        document.getElementById('gameFrame').src = url;
+        let buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        element.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
